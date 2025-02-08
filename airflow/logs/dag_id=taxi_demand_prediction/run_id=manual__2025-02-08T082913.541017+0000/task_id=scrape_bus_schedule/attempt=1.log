@@ -1,0 +1,18 @@
+[2025-02-08T08:29:16.821+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: taxi_demand_prediction.scrape_bus_schedule manual__2025-02-08T08:29:13.541017+00:00 [queued]>
+[2025-02-08T08:29:16.834+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: taxi_demand_prediction.scrape_bus_schedule manual__2025-02-08T08:29:13.541017+00:00 [queued]>
+[2025-02-08T08:29:16.835+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 4
+[2025-02-08T08:29:16.865+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): scrape_bus_schedule> on 2025-02-08 08:29:13.541017+00:00
+[2025-02-08T08:29:16.880+0000] {standard_task_runner.py:57} INFO - Started process 2097 to run task
+[2025-02-08T08:29:16.888+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'taxi_demand_prediction', 'scrape_bus_schedule', 'manual__2025-02-08T08:29:13.541017+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/taxi_demand_pipeline.py', '--cfg-path', '/tmp/tmp1ehsl1kq']
+[2025-02-08T08:29:16.891+0000] {standard_task_runner.py:85} INFO - Job 24: Subtask scrape_bus_schedule
+[2025-02-08T08:29:16.980+0000] {task_command.py:415} INFO - Running <TaskInstance: taxi_demand_prediction.scrape_bus_schedule manual__2025-02-08T08:29:13.541017+00:00 [running]> on host 0ec2860535ef
+[2025-02-08T08:29:17.126+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='taxi_demand_prediction' AIRFLOW_CTX_TASK_ID='scrape_bus_schedule' AIRFLOW_CTX_EXECUTION_DATE='2025-02-08T08:29:13.541017+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-08T08:29:13.541017+00:00'
+[2025-02-08T08:29:18.304+0000] {connectionpool.py:823} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0c6c014dc0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8a037ac8c08b3e6a513f15078ba6a290
+[2025-02-08T08:29:18.306+0000] {connectionpool.py:823} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0c6c014eb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8a037ac8c08b3e6a513f15078ba6a290
+[2025-02-08T08:29:18.307+0000] {connectionpool.py:823} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0c6c025040>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8a037ac8c08b3e6a513f15078ba6a290
+[2025-02-08T08:29:18.309+0000] {python.py:194} INFO - Done. Returned value was: Empty DataFrame
+Columns: []
+Index: []
+[2025-02-08T08:29:18.343+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=taxi_demand_prediction, task_id=scrape_bus_schedule, execution_date=20250208T082913, start_date=20250208T082916, end_date=20250208T082918
+[2025-02-08T08:29:18.399+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-02-08T08:29:18.433+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

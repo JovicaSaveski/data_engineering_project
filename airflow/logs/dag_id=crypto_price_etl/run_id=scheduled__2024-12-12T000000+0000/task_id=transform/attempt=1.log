@@ -1,0 +1,28 @@
+[2024-12-21T11:25:14.857+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-21T11:25:14.941+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_price_etl.transform scheduled__2024-12-12T00:00:00+00:00 [queued]>
+[2024-12-21T11:25:15.007+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_price_etl.transform scheduled__2024-12-12T00:00:00+00:00 [queued]>
+[2024-12-21T11:25:15.009+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-12-21T11:25:15.078+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): transform> on 2024-12-12 00:00:00+00:00
+[2024-12-21T11:25:15.095+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=466) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-21T11:25:15.103+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'crypto_price_etl', 'transform', 'scheduled__2024-12-12T00:00:00+00:00', '--job-id', '107', '--raw', '--subdir', 'DAGS_FOLDER/crypto_dag.py', '--cfg-path', '/tmp/tmponmjdx9x']
+[2024-12-21T11:25:15.126+0000] {standard_task_runner.py:72} INFO - Started process 502 to run task
+[2024-12-21T11:25:15.128+0000] {standard_task_runner.py:105} INFO - Job 107: Subtask transform
+[2024-12-21T11:25:15.329+0000] {task_command.py:467} INFO - Running <TaskInstance: crypto_price_etl.transform scheduled__2024-12-12T00:00:00+00:00 [running]> on host f4ec8002467d
+[2024-12-21T11:25:15.785+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='crypto_price_etl' AIRFLOW_CTX_TASK_ID='transform' AIRFLOW_CTX_EXECUTION_DATE='2024-12-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-12T00:00:00+00:00'
+[2024-12-21T11:25:15.790+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-21T11:25:15.792+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-21T11:25:15.793+0000] {logging_mixin.py:190} INFO - Current task name:transform state:running start_date:2024-12-21 11:25:14.957140+00:00
+[2024-12-21T11:25:15.794+0000] {logging_mixin.py:190} INFO - Dag name:crypto_price_etl and current dag run status:running
+[2024-12-21T11:25:15.795+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-21T11:25:16.042+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-21T11:25:16.082+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-21T11:25:16.102+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=crypto_price_etl, task_id=transform, run_id=scheduled__2024-12-12T00:00:00+00:00, execution_date=20241212T000000, start_date=20241221T112514, end_date=20241221T112516
+[2024-12-21T11:25:16.179+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-21T11:25:16.183+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-21T11:25:16.186+0000] {logging_mixin.py:190} INFO - Dag name:crypto_price_etl queued_at:2024-12-21 11:25:04.393648+00:00
+[2024-12-21T11:25:16.195+0000] {logging_mixin.py:190} INFO - Task hostname:f4ec8002467d operator:PythonOperator
+[2024-12-21T11:25:16.251+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-21T11:25:16.308+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-21T11:25:16.327+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
